@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_print_chelou.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akremer <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 13:39:19 by akremer           #+#    #+#             */
-/*   Updated: 2018/11/27 13:47:00 by akremer          ###   ########.fr       */
+/*   Created: 2018/11/27 16:35:10 by akremer           #+#    #+#             */
+/*   Updated: 2018/11/27 16:36:54 by akremer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "fillit.h"
 
-void		*ft_bzero(void *s, size_t n)
+void			ft_print_chelou(char **tab, size_t size)
 {
 	size_t	i;
-	char	*ns;
 
-	i = -1;
-	ns = (char*)s;
-	while (++i < n)
-		ns[i] = 0;
-	return (s);
+	i = 0;
+	while (i < size)
+	{
+		ft_putendl(tab[i]);
+		i++;
+	}
 }

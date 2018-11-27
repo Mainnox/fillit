@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memfulldel.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akremer <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 13:39:19 by akremer           #+#    #+#             */
-/*   Updated: 2018/11/27 13:47:00 by akremer          ###   ########.fr       */
+/*   Created: 2018/11/27 13:52:19 by akremer           #+#    #+#             */
+/*   Updated: 2018/11/27 13:52:21 by akremer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
-void		*ft_bzero(void *s, size_t n)
+void		ft_memfulldel(void **str, size_t size)
 {
-	size_t	i;
-	char	*ns;
+	size_t i;
 
-	i = -1;
-	ns = (char*)s;
-	while (++i < n)
-		ns[i] = 0;
-	return (s);
+	i = 0;
+	while (i < size)
+	{
+		ft_memdel(str);
+		i++;
+	}
 }

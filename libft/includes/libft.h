@@ -6,7 +6,7 @@
 /*   By: akremer <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 10:32:32 by akremer           #+#    #+#             */
-/*   Updated: 2018/11/21 16:43:58 by akremer          ###   ########.fr       */
+/*   Updated: 2018/11/27 15:02:37 by akremer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <unistd.h>
 # include <stdlib.h>
+# include "get_next_line.h"
 
 typedef struct		s_list
 {
@@ -22,6 +23,9 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+void				ft_print_words_table(char **tab);
+void				ft_memfulldel(void **str, size_t size);
+int					get_next_line(const int fd, char **line);
 void				*ft_realloc(void *ptr, size_t size);
 int					ft_strclen(const char *str, char c);
 char				*ft_strcsub(const char *src, char c);

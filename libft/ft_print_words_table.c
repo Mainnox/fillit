@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_print_words_table.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akremer <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 13:39:19 by akremer           #+#    #+#             */
-/*   Updated: 2018/11/27 13:47:00 by akremer          ###   ########.fr       */
+/*   Created: 2018/11/27 14:55:45 by akremer           #+#    #+#             */
+/*   Updated: 2018/11/27 16:17:48 by akremer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
-void		*ft_bzero(void *s, size_t n)
+void		ft_print_words_table(char **tab)
 {
-	size_t	i;
-	char	*ns;
+	int	i;
 
-	i = -1;
-	ns = (char*)s;
-	while (++i < n)
-		ns[i] = 0;
-	return (s);
+	i = 0;
+	while (tab[i] != NULL)
+	{
+		ft_putendl(tab[i]);
+		i++;
+	}
 }
